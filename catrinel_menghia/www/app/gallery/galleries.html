@@ -1,0 +1,9 @@
+<ion-view view-title="Galleries">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="gallery in galleries" href="#/app/galleries/{{gallery.id}}">
+                {{gallery.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
