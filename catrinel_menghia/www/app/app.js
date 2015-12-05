@@ -10,11 +10,17 @@
     angular
         .module('starter', [
             'ionic',
-            'starter.controllers'
+            'starter.controllers',
+            'starter.services'
         ])
 
-        .run(runConfig);
+        .run(runConfig)
+        .config(appConfig);
 
+    /**
+     * General Run configuration
+     * @param $ionicPlatform
+     */
     function runConfig($ionicPlatform) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -28,6 +34,19 @@
                 StatusBar.styleDefault();
             }
         });
+    }
+
+    /**
+     * General app configurations
+     * @param $ionicConfigProvider
+     */
+    function appConfig($ionicConfigProvider, $httpProvider) {
+        //disables the transition (slide) effect when changing views
+        $ionicConfigProvider.views.transition('none');
+
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
     }
 
 })();

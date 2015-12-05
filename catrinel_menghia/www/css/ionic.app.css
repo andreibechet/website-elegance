@@ -9088,3 +9088,27 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.gallery img {
+  max-width: 400px; }
+
+.gallery .item-image {
+  margin-bottom: 10px; }
+
+.navbar-default {
+  background-color: white; }
+  .navbar-default .container-fluid {
+    max-width: 960px;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+.galleries-wrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+
+a {
+  color: #000 !important; }
+
+a:hover {
+  color: #000 !important;
+  text-decoration: none !important; }

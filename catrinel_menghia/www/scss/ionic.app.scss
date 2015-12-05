@@ -20,3 +20,35 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+.gallery{
+    img {
+        max-width: 400px;
+    }
+    .item-image {
+        margin-bottom: 10px;
+    }
+}
+
+.navbar-default {
+    background-color: white;
+
+    .container-fluid {
+        max-width: 960px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.galleries-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: #000 !important;
+}
+a:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+}

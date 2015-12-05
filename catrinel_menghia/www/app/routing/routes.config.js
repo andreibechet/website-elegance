@@ -14,27 +14,59 @@
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: 'layout/menu.html',
-                controller: 'AppCtrl'
+                templateUrl: 'layout/menu.html'
             })
 
-            .state('app.search', {
-                url: '/search',
+            .state('app.acasa', {
+                url: '/acasa',
                 views: {
                     'menuContent': {
-                        templateUrl: 'layout/search.html'
+                        templateUrl: 'app/acasa/acasa.html',
+                        controller: 'AcasaCtrl'
                     }
                 }
             })
 
-            .state('app.browse', {
-                url: '/browse',
+            .state('app.magazine', {
+                url: '/magazine',
                 views: {
                     'menuContent': {
-                        templateUrl: 'layout/browse.html'
+                        templateUrl: 'app/magazine/magazine.html',
+                        controller: 'MagazineCtrl'
                     }
                 }
             })
+
+            .state('app.colaboratori', {
+                url: '/colaboratori',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/colaboratori/colaboratori.html',
+                        controller: 'ColaboratoriCtrl'
+                    }
+                }
+            })
+
+            .state('app.targ', {
+                url: '/targ',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/targ/targ.html',
+                        controller: 'TargCtrl'
+                    }
+                }
+            })
+
+            .state('app.contact', {
+                url: '/contact',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/contact/contact.html',
+                        controller: 'ContactCtrl'
+                    }
+                }
+            })
+
             .state('app.galleries', {
                 url: '/galleries',
                 views: {
