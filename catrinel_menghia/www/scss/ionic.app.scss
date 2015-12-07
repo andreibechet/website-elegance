@@ -21,7 +21,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
-.gallery{
+.gallery {
     img {
         max-width: 400px;
     }
@@ -48,7 +48,48 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 a {
     color: #000 !important;
 }
+
 a:hover {
     color: #000 !important;
     text-decoration: none !important;
 }
+
+/**
+*  Contact section
+*/
+.contact {
+    .contact-title {
+        margin-bottom: 20px;
+        padding-left: 60px;
+    }
+
+    .item {
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .item .descriere {
+        border-top: none !important;
+    }
+
+    .list {
+        padding: 30px 30px 30px 30px;
+        border-right: 1px solid #ddd;
+    }
+
+    .descriere {
+        padding: 30px 30px 30px 30px;
+
+        .item {
+            border-top: none;
+        }
+    }
+
+    .descriere-text {
+        padding: 20px 10px 10px 10px;
+    }
+}
+
+/**
+* End of contact section
+*/

@@ -9112,3 +9112,33 @@ a {
 a:hover {
   color: #000 !important;
   text-decoration: none !important; }
+
+/**
+*  Contact section
+*/
+.contact .contact-title {
+  margin-bottom: 20px;
+  padding-left: 60px; }
+
+.contact .item {
+  border-left: none !important;
+  border-right: none !important; }
+
+.contact .item .descriere {
+  border-top: none !important; }
+
+.contact .list {
+  padding: 30px 30px 30px 30px;
+  border-right: 1px solid #ddd; }
+
+.contact .descriere {
+  padding: 30px 30px 30px 30px; }
+  .contact .descriere .item {
+    border-top: none; }
+
+.contact .descriere-text {
+  padding: 20px 10px 10px 10px; }
+
+/**
+* End of contact section
+*/
