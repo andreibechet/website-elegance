@@ -9,7 +9,7 @@
         .controller('TargCtrl', TargCtrl);
 
     function TargCtrl() {
-        console.log("Targ controller");
+        console.log('Targ controller');
     }
 
 })();

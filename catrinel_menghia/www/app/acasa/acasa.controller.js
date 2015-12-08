@@ -9,7 +9,7 @@
         .controller('AcasaCtrl', AcasaCtrl);
 
     function AcasaCtrl() {
-        console.log("Acasa controller");
+        console.log('Acasa controller');
     }
 
 })();

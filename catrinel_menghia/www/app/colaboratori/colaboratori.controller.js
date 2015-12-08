@@ -9,7 +9,7 @@
         .controller('ColaboratoriCtrl', ColaboratoriCtrl);
 
     function ColaboratoriCtrl() {
-        console.log("Colaboratori controller");
+        console.log('Colaboratori controller');
     }
 
 })();

@@ -9,7 +9,7 @@
         .controller('MagazineCtrl', MagazineCtrl);
 
     function MagazineCtrl() {
-        console.log("Magazine controller");
+        console.log('Magazine controller');
     }
 
 })();

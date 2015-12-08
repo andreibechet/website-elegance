@@ -9,7 +9,7 @@
         .controller('ContactCtrl', ContactCtrl);
 
     function ContactCtrl() {
-        console.log("Contact controller");
+        console.log('contact controller');
     }
 
 })();
