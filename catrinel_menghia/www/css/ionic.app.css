@@ -9089,6 +9089,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.scroll {
+  height: 150% !important; }
+
 .gallery img {
   max-width: 400px; }
 
@@ -9158,5 +9161,7 @@ a:hover {
 .galleries-container img {
   margin: 0 auto; }
 
-.galleries-container .card {
-  padding-right: 0; }
+.galleries-container .collection-card {
+  margin-top: 20px; }
+  .galleries-container .collection-card .image-item {
+    min-height: 410px; }

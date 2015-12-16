@@ -21,6 +21,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.scroll {
+    height: 150% !important;
+}
+
 .gallery {
     img {
         max-width: 400px;
@@ -116,7 +120,11 @@ a:hover {
         margin: 0 auto;
     }
     
-    .card {
-        padding-right: 0;
+    .collection-card {
+        margin-top: 20px;
+
+        .image-item {
+            min-height: 410px;
+        }
     }
 }
