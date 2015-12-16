@@ -40,7 +40,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
 }
 
-.galleries-wrapper {
+.wrapper {
     max-width: 960px;
     margin: 0 auto;
 }
@@ -93,3 +93,30 @@ a:hover {
 /**
 * End of contact section
 */
+
+/**
+* Gallery detail
+*/
+
+.gallery-detail-image {
+    float: left;
+    margin: 0 5px 5px 5px;
+}
+
+.gallery-container {
+    padding: 0 10px;
+}
+
+/**
+* End of Gallery detail
+*/
+
+.galleries-container {
+    img {
+        margin: 0 auto;
+    }
+    
+    .card {
+        padding-right: 0;
+    }
+}

@@ -1,18 +1,10 @@
 <ion-view view-title="Gallery">
     <ion-content overflow-scroll="true">
-        <div class="galleries-wrapper">
-            <div class="list card gallery">
-
-                <div class="item">
-                    <h2>{{data[0].title[0].value}}</h2>
-                </div>
-                <div ng-repeat="img in data[0].field_image" class="item item-image">
+        <div class="wrapper">
+            <div class="gallery-container">
+                <div ng-repeat="img in data[0].field_image" class="gallery-detail-image">
                     <img src="{{img.url}}">
                 </div>
-                <div class="item" href="#">
-                    {{data[0].body[0].value}}
-                </div>
-
             </div>
         </div>
     </ion-content>

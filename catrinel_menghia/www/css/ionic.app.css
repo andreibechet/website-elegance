@@ -9102,7 +9102,7 @@ a.button {
     padding-left: 5px;
     padding-right: 5px; }
 
-.galleries-wrapper {
+.wrapper {
   max-width: 960px;
   margin: 0 auto; }
 
@@ -9142,3 +9142,21 @@ a:hover {
 /**
 * End of contact section
 */
+/**
+* Gallery detail
+*/
+.gallery-detail-image {
+  float: left;
+  margin: 0 5px 5px 5px; }
+
+.gallery-container {
+  padding: 0 10px; }
+
+/**
+* End of Gallery detail
+*/
+.galleries-container img {
+  margin: 0 auto; }
+
+.galleries-container .card {
+  padding-right: 0; }

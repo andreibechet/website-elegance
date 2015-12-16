@@ -1,11 +1,22 @@
 <ion-view view-title="Galleries">
     <ion-content overflow-scroll="true">
-        <div class="galleries-wrapper">
-            <div class="col-md-4" ng-repeat="gallery in data" href="#/app/galleries/{{gallery.nid[0].value}}">
-                <a href="#/app/galleries/{{gallery.nid[0].value}}">
-                    {{gallery.title[0].value}}
-                    <img class="img-responsive" src="{{gallery.field_image[0].url}}">
-                </a>
+        <div class="wrapper galleries-container">
+            <div class="list card col-md-4" ng-repeat="gallery in data" href="#/app/galleries/{{gallery.nid[0].value}}">
+
+                <div class="item item-avatar">
+                    <img src="/img/ionic.png">
+
+                    <h2>Pretty Hate Machine</h2>
+
+                    <p>Nine Inch Nails</p>
+                </div>
+
+                <div class="item">
+                    <a href="#/app/galleries/{{gallery.nid[0].value}}">
+                        <img class="img-responsive" src="{{gallery.field_image[0].url}}">
+                    </a>
+                </div>
+
             </div>
         </div>
     </ion-content>
