@@ -9163,5 +9163,11 @@ a:hover {
 
 .galleries-container .collection-card {
   margin-top: 20px; }
+  .galleries-container .collection-card .item-avatar {
+    border-left: none;
+    border-right: none; }
   .galleries-container .collection-card .image-item {
-    min-height: 425px; }
+    min-height: 425px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none; }

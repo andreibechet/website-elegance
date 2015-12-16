@@ -122,9 +122,16 @@ a:hover {
     
     .collection-card {
         margin-top: 20px;
-
+        
+        .item-avatar {
+            border-left: none;
+            border-right: none;
+        }
         .image-item {
             min-height: 425px;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
         }
     }
 }
