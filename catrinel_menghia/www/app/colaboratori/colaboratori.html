@@ -1,7 +1,28 @@
 <ion-view view-title="Colaboratori">
     <ion-content overflow-scroll="true">
-        <div class="wrapper">
-            <h1>Colaboratori</h1>
+        <div class="wrapper  colaboratori-container">
+
+            <div class="col-md-4">
+                <div class="collection-card" ng-repeat="colaboratori in data">
+                    <div class="item">
+                        <p>{{colaboratori.name[0].value}}</p>
+                        <p>{{colaboratori.field_adresa_colaboratori[0].value}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="collection-card">
+                    <div class="item map">
+                        <div id="map" style="min-width: 200px; height: 550px;"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </ion-content>
 </ion-view>
+
+
+
+

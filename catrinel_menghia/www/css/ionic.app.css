@@ -9158,16 +9158,32 @@ a:hover {
 /**
 * End of Gallery detail
 */
-.galleries-container img {
+.galleries-container img,
+.colaboratori-container img {
   margin: 0 auto; }
 
-.galleries-container .collection-card {
+.galleries-container .collection-card,
+.colaboratori-container .collection-card {
   margin-top: 20px; }
-  .galleries-container .collection-card .item-avatar {
+  .galleries-container .collection-card .item-avatar,
+  .colaboratori-container .collection-card .item-avatar {
     border-left: none;
     border-right: none; }
-  .galleries-container .collection-card .image-item {
+  .galleries-container .collection-card .image-item,
+  .colaboratori-container .collection-card .image-item {
     min-height: 425px;
     border-left: none;
     border-right: none;
     border-bottom: none; }
+
+/**
+* Collaboratori
+*/
+.colaboratori-container .item.map {
+  border: none; }
+
+.colaboratori-container .item {
+  border-top: none;
+  border-bottom: none;
+  padding: 5px !important;
+  text-align: center; }

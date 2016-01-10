@@ -115,7 +115,8 @@ a:hover {
 * End of Gallery detail
 */
 
-.galleries-container {
+.galleries-container,
+.colaboratori-container{
     img {
         margin: 0 auto;
     }
@@ -133,5 +134,21 @@ a:hover {
             border-right: none;
             border-bottom: none;
         }
+    }
+}
+
+/**
+* Collaboratori
+*/
+
+.colaboratori-container {
+    .item.map {
+        border: none;
+    }
+    .item {
+        border-top: none;
+        border-bottom: none;
+        padding: 5px !important;
+        text-align: center;
     }
 }
