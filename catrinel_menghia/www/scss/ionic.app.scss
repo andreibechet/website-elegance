@@ -63,6 +63,7 @@ a:hover {
 */
 
 .logo {
+    width: 100%;
     .top-left-logo {
         justify-content: flex-start;
         img {
@@ -71,7 +72,13 @@ a:hover {
         }
     }
     .bottom-center-logo {
-
+        // added to center the image
+        width: 72px; // the current relative width of the image in the page
+        margin: 0 auto;
+        img {
+            width: auto;
+            height: 30px;
+        }
     }
 }
 
