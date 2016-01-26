@@ -41,6 +41,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     src: url('OstrichSansRounded-Medium.otf');
 }
 
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .scroll {
     height: 150% !important;
 }
@@ -86,6 +90,7 @@ a:hover {
     width: 100%;
     .top-left-logo {
         justify-content: flex-start;
+        margin-top: 5px;
         img {
             width: auto;
             height: 50px;
@@ -216,7 +221,7 @@ ul.home_carousel {
     }
     .text_in_carousel {
         position: absolute;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         // background: #DDD;
@@ -224,10 +229,11 @@ ul.home_carousel {
         opacity: 1;
         border-radius: 3px;
         p{
-            font-family: 'Abel', sans-serif;
-
+            font-family: 'Abel', sans-serif !important;
             font-size: 48px;
             font-weight: bold;
+            line-height: 50px;
+            text-align: center;
             color: white;
         }
     }
