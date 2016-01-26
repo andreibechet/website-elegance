@@ -59,6 +59,27 @@ a:hover {
 }
 
 /**
+*  Logo' sections
+*/
+
+.logo {
+    .top-left-logo {
+        justify-content: flex-start;
+        img {
+            width: auto;
+            height: 50px;
+        }
+    }
+    .bottom-center-logo {
+
+    }
+}
+
+/**
+*  End of Logo' sections
+*/
+
+/**
 *  Contact section
 */
 .contact {
@@ -120,10 +141,10 @@ a:hover {
     img {
         margin: 0 auto;
     }
-    
+
     .collection-card {
         margin-top: 20px;
-        
+
         .item-avatar {
             border-left: none;
             border-right: none;
