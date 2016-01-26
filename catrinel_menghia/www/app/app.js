@@ -11,7 +11,8 @@
         .module('starter', [
             'ionic',
             'starter.controllers',
-            'starter.services'
+            'starter.services',
+            'angular-carousel'
         ])
 
         .run(runConfig)
