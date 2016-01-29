@@ -3,8 +3,8 @@
     <div class="wrapper">
       <div class="gallery-container">
 
-        <div class="collection-card col-sm-6 col-md-2" ng-repeat="img in data[0].field_image">
-          <div class="item image-item" ng-click = "openModal()">
+        <div class="col-sm-6 col-md-3 gallery-detail-preview" ng-repeat="img in data[0].field_image">
+          <div class="" ng-click = "openModal()">
             <img class="img-responsive" src="{{img.url}}">
           </div>
         </div>
@@ -15,7 +15,7 @@
 </ion-view>
 
 <script id = "gallery-modal.html" type = "text/ng-template">
-  <ion-modal-view>
+  <ion-modal-view class="transparent">
     <ion-header-bar>
       <div class = "icon ion-close-round close-modal" ng-click = "closeModal()"></div>
     </ion-header-bar>
@@ -24,7 +24,7 @@
       <ul rn-carousel class="image detail_carousel col-md-12" rn-carousel-auto-slide>
         <li ng-repeat="image in data[0].field_image">
           <div class="layer">
-            <img src="{{image.url}}">
+            <img class="img-responsive" src="{{image.url}}">
             <div class="text_in_carousel">
               <p> {{ image.alt }} </p>
             </div>

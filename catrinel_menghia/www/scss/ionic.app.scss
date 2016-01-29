@@ -19,16 +19,20 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic);
 
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
 // Include other fonts
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface); //font-family: 'Abril Fatface', cursive;
-@import url(https://fonts.googleapis.com/css?family=Wire+One); // font-family: 'Wire One', sans-serif;
-@import url(https://fonts.googleapis.com/css?family=Dosis:500); // font-family: 'Dosis', sans-serif;
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed); // font-family: 'Roboto Condensed', sans-serif;
-@import url(https://fonts.googleapis.com/css?family=Abel); // font-family: 'Abel', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+//font-family: 'Abril Fatface', cursive;
+@import url(https://fonts.googleapis.com/css?family=Wire+One);
+// font-family: 'Wire One', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Dosis:500);
+// font-family: 'Dosis', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+// font-family: 'Roboto Condensed', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family: 'Abel', sans-serif;
 
 @font-face {
     font-family: 'ostrich-sans-master';
@@ -41,7 +45,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     src: url('OstrichSansRounded-Medium.otf');
 }
 
-body{
+body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -67,7 +71,7 @@ body{
         padding-right: 5px;
     }
 
-    a{
+    a {
         font-size: 16px;
     }
 }
@@ -162,29 +166,48 @@ a:hover {
     padding: 0 10px;
 }
 
-ul.detail_carousel {
-  width: 100%;
-  height: 500px;
-
-  img{
-    width: 100%;
-    height: 500px;
-  }
-
-  .close-modal {
-    position:absolute;
-    right:0;
-    width:15px;
-  }
+.gallery-detail-preview {
+    margin-bottom: 15px;
 }
 
+ul.detail_carousel {
+    width: 100%;
+    height: 500px;
+
+    img {
+        height: 500px;
+    }
+
+}
+.close-modal {
+    position: absolute !important;
+    right: 0 !important;
+    width: 15px;
+}
+.active .modal-backdrop-bg {
+    opacity: .5;
+}
+.modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    background-color: #000;
+    opacity: 0;
+}
+
+.modal {
+    max-width: 350px;
+    left: 40% !important;
+}
+.transparent {
+    background: transparent !important;
+}
 
 /**
 * End of Gallery detail
 */
 
 .galleries-container,
-.colaboratori-container{
+.colaboratori-container {
     img {
         margin: 0 auto;
     }
@@ -221,12 +244,11 @@ ul.detail_carousel {
     }
 }
 
-
 /**
 * Acasa
 */
 
-ul.home_carousel{
+ul.home_carousel {
     width: 100%;
     height: 1024px;
     // max-height: 400px;
@@ -243,7 +265,7 @@ ul.home_carousel{
         padding: 20px;
         opacity: 0.7;
         border-radius: 3px;
-        p{
+        p {
             font-family: 'Abel', sans-serif !important;
             font-size: 48px;
             font-weight: bold;
