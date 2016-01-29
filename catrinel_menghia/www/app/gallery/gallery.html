@@ -1,11 +1,37 @@
 <ion-view view-title="Gallery">
-    <ion-content overflow-scroll="true">
-        <div class="wrapper">
-            <div class="gallery-container">
-                <div ng-repeat="img in data[0].field_image" class="gallery-detail-image">
-                    <img src="{{img.url}}">
-                </div>
-            </div>
+  <ion-content overflow-scroll="true">
+    <div class="wrapper">
+      <div class="gallery-container">
+
+        <div class="collection-card col-sm-6 col-md-2" ng-repeat="img in data[0].field_image">
+          <div class="item image-item" ng-click = "openModal()">
+            <img class="img-responsive" src="{{img.url}}">
+          </div>
         </div>
-    </ion-content>
+      </div>
+
+    </div>
+  </ion-content>
 </ion-view>
+
+<script id = "gallery-modal.html" type = "text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <div class = "icon ion-close-round close-modal" ng-click = "closeModal()"></div>
+    </ion-header-bar>
+
+    <ion-content>
+      <ul rn-carousel class="image detail_carousel col-md-12" rn-carousel-auto-slide>
+        <li ng-repeat="image in data[0].field_image">
+          <div class="layer">
+            <img src="{{image.url}}">
+            <div class="text_in_carousel">
+              <p> {{ image.alt }} </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </ion-content>
+  </ion-modal-view>
+</script>
