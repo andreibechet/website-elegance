@@ -229,11 +229,27 @@ ul.detail_carousel {
 }
 
 /**
-* Collaboratori & Magazine
+* Collaboratori
 */
 
 .colaboratori-container {
     .item.map {
+        border: none;
+    }
+    .item {
+        border-top: none;
+        border-bottom: none;
+        padding: 5px !important;
+        text-align: center;
+    }
+}
+
+/**
+* Magazine
+*/
+
+.magazine-container {
+    .item.map_magazine {
         border: none;
     }
     .item {

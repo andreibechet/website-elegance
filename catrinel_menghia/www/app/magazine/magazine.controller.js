@@ -22,7 +22,7 @@
                     }
                 }, locations);
 
-                var map = new google.maps.Map(document.getElementById('map'), {
+                var map = new google.maps.Map(document.getElementById('map_magazine'), {
                     zoom: 13,
                     center: new google.maps.LatLng(44.3231406, 23.796925),
                     mapTypeId: google.maps.MapTypeId.ROADMAP
