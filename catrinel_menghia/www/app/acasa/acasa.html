@@ -1,16 +1,21 @@
 <ion-view view-title="Acasa">
-  <ion-content overflow-scroll="true">
-    <div class="wrapper">
-    </div>
-    <ul rn-carousel class="image home_carousel" rn-carousel-auto-slide>
-      <li ng-repeat="image in data[0].field_image">
-        <div class="layer">
-          <img src="{{ image.url }}">
-          <div class="text_in_carousel">
-            <p> {{ image.alt }} </p>
-          </div>
+    <ion-content overflow-scroll="true">
+        <div ng-include="'layout/menu.html'"/>
+
+        <div class="wrapper">
         </div>
-      </li>
-    </ul>
-  </ion-content>
+        <ul rn-carousel class="image home_carousel" rn-carousel-auto-slide>
+            <li ng-repeat="image in data[0].field_image">
+                <div class="layer">
+                    <img src="{{ image.url }}">
+
+                    <div class="text_in_carousel">
+                        <p> {{ image.alt }} </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div ng-include="'layout/footer.html'"/>
+    </ion-content>
 </ion-view>

@@ -1,5 +1,8 @@
 <ion-view view-title="Galleries">
     <ion-content overflow-scroll="true">
+
+        <div ng-include="'layout/menu.html'"/>
+
         <div class="wrapper galleries-container">
             <div class="collection-card col-sm-6 col-md-4" ng-repeat="gallery in data" href="#/app/galleries/{{gallery.nid[0].value}}">
 
@@ -8,12 +11,15 @@
                 </div>
 
                 <div class="item image-item">
-                    <a href="#/app/galleries/{{gallery.nid[0].value}}">
+                    <a href="#/galleries/{{gallery.nid[0].value}}">
                         <img class="img-responsive" src="{{gallery.field_image[0].url}}">
                     </a>
                 </div>
 
             </div>
         </div>
+
+        <div ng-include="'layout/footer.html'"/>
+
     </ion-content>
 </ion-view>
