@@ -3,8 +3,15 @@
 
         <div ng-include="'layout/menu.html'"/>
 
-        <div class="wrapper">
-            <h1>Targuri de nunti</h1>
+        <div class="wrapper targuri-container">
+            <div class="collection-card" ng-repeat="targuri in data">
+                <div class="item">
+                    <p>>> {{targuri.name[0].value}}
+                        in perioada {{targuri.field_data_inceput_targ[0].value}} - {{targuri.field_data_sfarsit_targ[0].value}}
+                        la {{targuri.field_locatie_targ[0].value}}
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div ng-include="'layout/footer.html'"/>

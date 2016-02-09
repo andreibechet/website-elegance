@@ -150,7 +150,7 @@ a:hover {
     .descriere-text {
         padding: 20px 10px 10px 10px;
     }
-    
+
     textarea {
         height: 150px;
     }
@@ -263,6 +263,25 @@ ul.detail_carousel {
         border-bottom: none;
         padding: 5px !important;
         text-align: center;
+    }
+}
+
+/**
+* Targuri
+*/
+
+.targuri-container {
+    .item {
+        justify-content: center;
+
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+
+        padding: 15px !important;
+        align-content: center;
+        text-align: left;
     }
 }
 
