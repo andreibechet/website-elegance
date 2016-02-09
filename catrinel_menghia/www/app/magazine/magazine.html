@@ -5,26 +5,29 @@
 
         <div class="wrapper magazine-container">
 
-            <div class="col-md-4">
-                <div class="collection-card" ng-repeat="magazine in data">
-                    <div class="item">
-                        <p>{{magazine.name[0].value}}</p>
-                        <p>{{magazine.field_adresa_magazin[0].value}}</p>
+
+            <div class="col-md-12">
+                <div class="collection-card">
+                    <div class="item map_magazine">
+                        <div id="map_magazine" style="min-width: 200px; height: 450px;"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
+
+            <div class="col-md-6" ng-repeat="magazine in data">
                 <div class="collection-card">
-                    <div class="item map_magazine">
-                        <div id="map_magazine" style="min-width: 200px; height: 550px;"></div>
+                    <div class="item">
+                        <p>{{magazine.name[0].value}}</p>
+
+                        <p>{{magazine.field_adresa_magazin[0].value}}</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div ng-include="'layout/footer.html'"/>
+        <div id="footer" ng-include="'layout/footer.html'"/>
 
     </ion-content>
 </ion-view>
