@@ -1,43 +1,37 @@
 <ion-view view-title="Gallery">
-  <ion-content overflow-scroll="true">
+    <ion-content overflow-scroll="true">
 
-    <div ng-include="'layout/menu.html'"/>
+        <div ng-include="'layout/menu.html'"/>
 
-    <div class="wrapper">
-      <div class="gallery-container">
+        <div class="wrapper">
+            <div class="gallery-container">
+                <div class="col-md-6">
+                    <ul rn-carousel class="image detail_carousel" rn-carousel-index="slideIndex2">
+                        <li ng-repeat="slide in data[0].field_image">
+                            <div class="layer">
+                                <img src="{{ slide.url }}">
 
-        <div class="col-sm-6 col-md-3 gallery-detail-preview" ng-repeat="img in data[0].field_image">
-          <div class="" ng-click = "openModal()">
-            <img class="img-responsive" src="{{img.url}}">
-          </div>
-        </div>
-      </div>
+                                <div class="text_in_carousel">
+                                    <p> {{ slide.alt }} </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="thumbs">
+                        <div class="thumb" ng-repeat="slide in data[0].field_image"
+                             ng-click="$parent.slideIndex2=$index"
+                             ng-style="{'background-image': 'url(' + slide.url + ')'}"
+                             ng-class="{'is-active': ($parent.slideIndex2==$index)}"></div>
+                    </div>
+                </div>
 
-    </div>
-
-    <div  id="footer" ng-include="'layout/footer.html'"/>
-
-  </ion-content>
-</ion-view>
-
-<script id = "gallery-modal.html" type = "text/ng-template">
-  <ion-modal-view class="transparent">
-    <ion-header-bar>
-      <div class = "icon ion-close-round close-modal" ng-click = "closeModal()"></div>
-    </ion-header-bar>
-
-    <ion-content>
-      <ul rn-carousel class="image detail_carousel col-md-12" rn-carousel-auto-slide>
-        <li ng-repeat="image in data[0].field_image">
-          <div class="layer">
-            <img class="img-responsive" src="{{image.url}}">
-            <div class="text_in_carousel">
-              <p> {{ image.alt }} </p>
             </div>
-          </div>
-        </li>
-      </ul>
+
+        </div>
+
+        <div id="footer" ng-include="'layout/footer.html'"/>
 
     </ion-content>
-  </ion-modal-view>
-</script>
+</ion-view>
