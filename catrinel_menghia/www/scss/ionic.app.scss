@@ -185,6 +185,8 @@ ul.detail_carousel {
 .thumbs {
     width: 100%;
     text-align: center;
+    max-height: 600px;
+    overflow-y: scroll;
 }
 
 .thumb {
