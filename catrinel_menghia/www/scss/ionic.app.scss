@@ -173,6 +173,13 @@ a:hover {
     border-top: 1px solid #ddd;
 }
 
+.gallery-detail,
+.collaboratori-page,
+.contact-page,
+.magazine-page,
+.targ-page{
+    overflow: hidden;
+}
 
 ul.detail_carousel {
     height: 600px;
