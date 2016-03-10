@@ -9174,7 +9174,7 @@ a:hover {
   border-right: 1px solid #ddd; }
 
 .contact .descriere {
-  padding: 30px 30px 30px 30px; }
+  padding: 0px 30px 30px 30px; }
   .contact .descriere .item {
     border-top: none; }
 
@@ -9240,7 +9240,7 @@ ul.detail_carousel {
 .galleries-container .collection-card,
 .colaboratori-container .collection-card,
 .magazine-container .collection-card {
-  margin-top: 20px; }
+  margin-top: 7px; }
   .galleries-container .collection-card .gallery-title,
   .colaboratori-container .collection-card .gallery-title,
   .magazine-container .collection-card .gallery-title {
@@ -9283,6 +9283,9 @@ ul.detail_carousel {
 /**
 * Targuri
 */
+.targuri-container .targ-banner {
+  margin-bottom: 20px; }
+
 .targuri-container .item {
   justify-content: center;
   border-top: none;

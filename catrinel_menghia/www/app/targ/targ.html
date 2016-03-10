@@ -4,7 +4,11 @@
         <div ng-include="'layout/menu.html'"/>
 
         <div class="wrapper targuri-container">
+          <div class="targ-banner text-center">
+            <img src="img/banner-lung.jfif">
+          </div>
             <div class="col-sm-6 col-md-4" ng-repeat="targuri in data">
+
                 <div class="thumbnail">
                     <div class="caption">
                         <h4>{{targuri.field_locatie_targ[0].value}}</h4>

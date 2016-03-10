@@ -140,7 +140,7 @@ a:hover {
     }
 
     .descriere {
-        padding: 30px 30px 30px 30px;
+        padding: 0px 30px 30px 30px;
 
         .item {
             border-top: none;
@@ -221,7 +221,7 @@ ul.detail_carousel {
     }
 
     .collection-card {
-        margin-top: 20px;
+        margin-top: 7px;
 
         .gallery-title {
             border-left: none;
@@ -275,6 +275,9 @@ ul.detail_carousel {
 */
 
 .targuri-container {
+  .targ-banner {
+    margin-bottom:20px;
+  }
     .item {
         justify-content: center;
 
