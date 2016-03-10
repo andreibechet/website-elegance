@@ -15,6 +15,7 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic);
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -26,6 +27,11 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Wire+One);
+@import url(https://fonts.googleapis.com/css?family=Dosis:500);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Abel);
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9089,8 +9095,18 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.scroll {
-  height: 150% !important; }
+@font-face {
+  font-family: 'ostrich-sans-master';
+  src: url("OstrichSans-Black.otf");
+  src: url("OstrichSans-Bold.otf");
+  src: url("OstrichSans-Heavy.otf");
+  src: url("OstrichSans-Light.otf");
+  src: url("OstrichSans-Medium.otf");
+  src: url("OstrichSansInline-Regular.otf");
+  src: url("OstrichSansRounded-Medium.otf"); }
+
+body {
+  font-family: 'Roboto Condensed', sans-serif; }
 
 .gallery img {
   max-width: 400px; }
@@ -9104,6 +9120,8 @@ a.button {
     max-width: 960px;
     padding-left: 5px;
     padding-right: 5px; }
+  .navbar-default a {
+    font-size: 16px; }
 
 .wrapper {
   max-width: 960px;
@@ -9116,6 +9134,27 @@ a:hover {
   color: #000 !important;
   text-decoration: none !important; }
 
+/**
+*  Logo' sections
+*/
+.logo {
+  width: 100%; }
+  .logo .top-left-logo {
+    justify-content: flex-start;
+    margin-top: 5px; }
+    .logo .top-left-logo img {
+      width: auto;
+      height: 50px; }
+  .logo .bottom-center-logo {
+    width: 72px;
+    margin: 0 auto; }
+    .logo .bottom-center-logo img {
+      width: auto;
+      height: 30px; }
+
+/**
+*  End of Logo' sections
+*/
 /**
 *  Contact section
 */
@@ -9142,35 +9181,76 @@ a:hover {
 .contact .descriere-text {
   padding: 20px 10px 10px 10px; }
 
+.contact textarea {
+  height: 150px; }
+
 /**
 * End of contact section
 */
 /**
 * Gallery detail
 */
-.gallery-detail-image {
-  float: left;
-  margin: 0 5px 5px 5px; }
-
 .gallery-container {
   padding: 0 10px; }
+
+.gallery-detail-preview {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #ddd; }
+
+.gallery-detail,
+.collaboratori-page,
+.contact-page,
+.magazine-page,
+.targ-page {
+  overflow: hidden; }
+
+ul.detail_carousel {
+  height: 600px;
+  font-size: 0; }
+  ul.detail_carousel img {
+    max-width: 450px; }
+
+.thumbs {
+  width: 100%;
+  text-align: center;
+  max-height: 600px;
+  overflow-y: scroll; }
+
+.thumb {
+  display: inline-block;
+  background-size: cover;
+  border: 1px solid transparent;
+  margin: 2px 4px;
+  width: 90px;
+  height: 140px;
+  transition: border 0.2s ease-in; }
+
+.thumb:hover {
+  border: 3px solid #ddd; }
 
 /**
 * End of Gallery detail
 */
 .galleries-container img,
-.colaboratori-container img {
+.colaboratori-container img,
+.magazine-container img {
   margin: 0 auto; }
 
 .galleries-container .collection-card,
-.colaboratori-container .collection-card {
+.colaboratori-container .collection-card,
+.magazine-container .collection-card {
   margin-top: 20px; }
-  .galleries-container .collection-card .item-avatar,
-  .colaboratori-container .collection-card .item-avatar {
+  .galleries-container .collection-card .gallery-title,
+  .colaboratori-container .collection-card .gallery-title,
+  .magazine-container .collection-card .gallery-title {
     border-left: none;
-    border-right: none; }
+    border-right: none;
+    align-content: center;
+    text-align: center; }
   .galleries-container .collection-card .image-item,
-  .colaboratori-container .collection-card .image-item {
+  .colaboratori-container .collection-card .image-item,
+  .magazine-container .collection-card .image-item {
     min-height: 425px;
     border-left: none;
     border-right: none;
@@ -9187,3 +9267,65 @@ a:hover {
   border-bottom: none;
   padding: 5px !important;
   text-align: center; }
+
+/**
+* Magazine
+*/
+.magazine-container .item.map_magazine {
+  border: none; }
+
+.magazine-container .item {
+  border-top: none;
+  border-bottom: none;
+  padding: 5px !important;
+  text-align: center; }
+
+/**
+* Targuri
+*/
+.targuri-container .item {
+  justify-content: center;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding: 15px !important;
+  align-content: center;
+  text-align: left; }
+
+/**
+* Acasa
+*/
+.home-page {
+  overflow: hidden; }
+
+ul.home_carousel {
+  width: 100%;
+  height: 1024px; }
+  ul.home_carousel img {
+    width: 100%;
+    height: 100%; }
+  ul.home_carousel .text_in_carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0.7;
+    border-radius: 3px; }
+    ul.home_carousel .text_in_carousel p {
+      font-family: 'Abel', sans-serif !important;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 50px;
+      text-align: center;
+      color: #FAC927; }
+
+/**
+* End section Acasa
+*/
+#footer {
+  position: absolute;
+  background: white;
+  width: 100%;
+  bottom: 0; }

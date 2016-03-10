@@ -15,32 +15,20 @@
     });
   }
 
-  function GalleryDetailCtrl($scope, getGalleriesByNid, $ionicModal) {
-    getGalleriesByNid.async().then(function () {
-      $scope.data = getGalleriesByNid.data();
-    });
+  function GalleryDetailCtrl($scope, $stateParams, $http) {
 
-    //modal functions
-    $ionicModal.fromTemplateUrl('gallery-modal.html', {
-      scope: $scope,
-      animation: 'slide-in-up'
-    }).then(function (modal) {
-      $scope.modal = modal;
-    });
+    $http({
+      method: 'get',
+      url: 'http://workout.elegance-ama.ro/gallery_id/' + $stateParams.galleryId,
 
-    $scope.openModal = function () {
-      $scope.modal.show();
-    };
+    }).then(
+        function succes(response) {
+          $scope.data = response.data;
 
-    $scope.closeModal = function () {
-      $scope.modal.hide();
-    };
-
-    //Cleanup the modal when we're done with it!
-    $scope.$on('$destroy', function () {
-      $scope.modal.remove();
-    });
-
+        },
+        function error(reason) {
+          defer.reject(reason);
+        });
   }
 
 })();

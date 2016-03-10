@@ -42,6 +42,7 @@
      * @returns a gallery by id
      */
     function getGalleriesByNid($http, $stateParams, $q) {
+        console.log("3");
         var deffered = $q.defer();
         var data = [];
         var getGalleriesByNid = {};
@@ -60,6 +61,7 @@
         };
 
         return getGalleriesByNid;
+
     }
 
 })();
