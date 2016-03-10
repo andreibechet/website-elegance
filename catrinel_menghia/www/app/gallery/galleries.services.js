@@ -3,8 +3,7 @@
 
     angular
         .module('starter.services')
-        .factory('getGalleries', getGalleries)
-        .factory('getGalleriesByNid', getGalleriesByNid);
+        .factory('getGalleries', getGalleries);
 
     /**
      *
@@ -32,36 +31,6 @@
         };
 
         return getGalleries;
-    }
-
-    /**
-     *
-     * @param $http
-     * @param $stateParams
-     * @param $q
-     * @returns a gallery by id
-     */
-    function getGalleriesByNid($http, $stateParams, $q) {
-        console.log("3");
-        var deffered = $q.defer();
-        var data = [];
-        var getGalleriesByNid = {};
-        var path = 'http://workout.elegance-ama.ro/gallery_id/' + $stateParams.galleryId;
-
-        getGalleriesByNid.async = function () {
-            $http.get(path)
-                .success(function (d) {
-                    data = d;
-                    deffered.resolve();
-                });
-            return deffered.promise;
-        };
-        getGalleriesByNid.data = function () {
-            return data;
-        };
-
-        return getGalleriesByNid;
-
     }
 
 })();
