@@ -9158,6 +9158,9 @@ a:hover {
 /**
 *  Contact section
 */
+.contact .contact.text-center {
+  margin-top: 10px; }
+
 .contact .contact-title {
   margin-bottom: 20px;
   padding-left: 60px; }
@@ -9275,8 +9278,8 @@ ul.detail_carousel {
   border: none; }
 
 .magazine-container .item {
-  border-top: none;
-  border-bottom: none;
+  border-left: none;
+  border-right: none;
   padding: 5px !important;
   text-align: center; }
 
@@ -9288,6 +9291,13 @@ ul.detail_carousel {
 
 .targuri-container .targ-banner {
   margin-bottom: 20px; }
+
+.targuri-container .thumbnail {
+  border-top: none;
+  border-bottom: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
 
 .targuri-container .item {
   justify-content: center;
