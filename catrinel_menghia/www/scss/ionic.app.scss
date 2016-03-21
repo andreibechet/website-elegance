@@ -120,9 +120,13 @@ a:hover {
 *  Contact section
 */
 .contact {
-  .contact.text-center {
-    margin-top:10px;
-  }
+    .growl-container.growl-fixed.top-right {
+        top: 90px !important;
+    }
+
+    .contact.text-center {
+        margin-top: 10px;
+    }
     .contact-title {
         margin-bottom: 20px;
         padding-left: 60px;
@@ -180,14 +184,14 @@ a:hover {
 .collaboratori-page,
 .contact-page,
 .magazine-page,
-.targ-page{
+.targ-page {
     overflow: hidden;
 }
 
 ul.detail_carousel {
     height: 600px;
     font-size: 0;
-    img{
+    img {
         max-width: 450px;
     }
 }
@@ -208,6 +212,7 @@ ul.detail_carousel {
     height: 140px;
     transition: border 0.2s ease-in;
 }
+
 .thumb:hover {
     border: 3px solid #ddd;
 }
@@ -218,7 +223,7 @@ ul.detail_carousel {
 
 .galleries-container,
 .colaboratori-container,
-.magazine-container{
+.magazine-container {
     img {
         margin: 0 auto;
     }
@@ -278,20 +283,20 @@ ul.detail_carousel {
 */
 
 .targuri-container {
-  h4 {
-    font-size:16px;
-  }
-  .targ-banner {
-    margin-bottom:20px;
-  }
+    h4 {
+        font-size: 16px;
+    }
+    .targ-banner {
+        margin-bottom: 20px;
+    }
 
-  .thumbnail {
-    border-top:none;
-    border-bottom:none ;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
-  }
+    .thumbnail {
+        border-top: none;
+        border-bottom: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
     .item {
         justify-content: center;
 
@@ -310,7 +315,7 @@ ul.detail_carousel {
 * Acasa
 */
 
-.home-page{
+.home-page {
     overflow: hidden;
 }
 
@@ -345,7 +350,6 @@ ul.home_carousel {
 /**
 * End section Acasa
 */
-
 
 #footer {
     position: absolute;

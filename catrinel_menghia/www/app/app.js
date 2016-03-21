@@ -12,7 +12,8 @@
             'ionic',
             'starter.controllers',
             'starter.services',
-            'angular-carousel'
+            'angular-carousel',
+            'angular-growl'
         ])
 
         .run(runConfig)

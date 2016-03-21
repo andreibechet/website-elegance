@@ -9,22 +9,28 @@
                 <h1>Contact</h1>
             </div>
 
+            <div growl></div>
+
             <div class="col-md-6">
-                <div class="list">
-                    <label class="item item-input">
-                        <input type="text" placeholder="Numele">
-                    </label>
-                    <label class="item item-input">
-                        <input type="text" placeholder="E-Mail">
-                    </label>
-                    <label class="item item-input">
-                        <input type="text" placeholder="Subiect">
-                    </label>
-                    <label class="item item-input">
-                        <textarea placeholder="Mesaj"></textarea>
-                    </label>
-                    <button type="submit" class="button button-block button-positive">Trimite</button>
-                </div>
+
+                <form name="daniel" ng-submit="save()">
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" ng-model="user.nume" placeholder="Numele">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text"  ng-model="user.mail" placeholder="E-Mail">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text"  ng-model="user.subiect" placeholder="Subiect">
+                        </label>
+                        <label class="item item-input">
+                            <textarea  ng-model="user.mesaj" placeholder="Mesaj"></textarea>
+                        </label>
+                        <button class="button button-block button-positive">Trimite</button>
+                    </div>
+                </form>
+
             </div>
 
             <div class="col-md-6">
@@ -42,11 +48,11 @@
                         Elegance este brendul S.C. Iagny S.R.L. cu sediul: Com. Simnicu de Sus jud. Dolj.
                         j16/1063/2004 RO16474850
                     </div>
-                  <div class="contact text-center">
-                    <a target="_blank" href="http://www.mariagefest.ro">
-                      <img src="img/banner-patrat.jfif">
-                    </a>
-                  </div>
+                    <div class="contact text-center">
+                        <a target="_blank" href="http://www.mariagefest.ro">
+                            <img src="img/banner-patrat.jfif">
+                        </a>
+                    </div>
 
                 </div>
 
@@ -55,7 +61,7 @@
 
         </div>
 
-        <div  id="footer" ng-include="'layout/footer.html'"/>
+        <div id="footer" ng-include="'layout/footer.html'"/>
 
     </ion-content>
 </ion-view>
