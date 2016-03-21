@@ -27,9 +27,15 @@ $post_date = file_get_contents("php://input");
 $data = json_decode($post_date);
 
 $to = "ionu.danic@gmail.com";
-$subject = $data->subject;
-$txt = $data->message;
-$headers = "From: ".$data->email;
+$subject = "Elegance-ama.ro: ".$data->subject;
+
+$txt  = "Nume: ".$data->name." \r\n";
+$txt .= "Subiect: ".$data->subject." \r\n";
+$txt .= "Email: ".$data->email." \r\n";
+$txt .= "Mesaj: ".$data->message." \r\n";
+
+$headers  = 'From: Elegance Website' . "\r\n";
+$headers .= "Reply-To:".$data->email . "\r\n";
 
 mail($to,$subject,$txt,$headers);
 
