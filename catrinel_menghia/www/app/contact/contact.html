@@ -13,22 +13,31 @@
 
             <div class="col-md-6">
 
-                <form name="daniel" ng-submit="save()">
+                <form name="contact" ng-submit="save()">
                     <div class="list">
                         <label class="item item-input">
-                            <input type="text" ng-model="user.nume" placeholder="Numele">
+                            <input required name="nume" type="text" ng-model="user.nume" placeholder="Nume">
                         </label>
                         <label class="item item-input">
-                            <input type="text"  ng-model="user.mail" placeholder="E-Mail">
+                            <input required name="mail" type="email" ng-model="user.mail" placeholder="E-Mail" >
+                            <span ng-if="!contact.mail.$valid" >Gresit</span>
                         </label>
                         <label class="item item-input">
-                            <input type="text"  ng-model="user.subiect" placeholder="Subiect">
+                            <input required name="subiect" type="text" ng-model="user.subiect" placeholder="Subiect">
                         </label>
                         <label class="item item-input">
-                            <textarea  ng-model="user.mesaj" placeholder="Mesaj"></textarea>
+                            <textarea required name="mesaj"  ng-model="user.mesaj" placeholder="Mesaj"></textarea>
                         </label>
-                        <button class="button button-block button-positive">Trimite</button>
+
+                        <label class="item item-input">
+                            <span>5 + 2 = </span>
+                            <input required ng-pattern="/^[7]+$/" name="number" class="human-validation" type="text" ng-model="user.number" placeholder="0123">
+                            <span ng-if="!contact.number.$valid" >Gresit</span>
+                        </label>
+
+                        <button ng-disabled="contact.$invalid" class="button button-block button-positive">Trimite</button>
                     </div>
+
                 </form>
 
             </div>

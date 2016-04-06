@@ -9158,6 +9158,9 @@ a:hover {
 /**
 *  Contact section
 */
+.contact .growl-container.growl-fixed.top-right {
+  top: 90px !important; }
+
 .contact .contact.text-center {
   margin-top: 10px; }
 
@@ -9186,6 +9189,10 @@ a:hover {
 
 .contact textarea {
   height: 150px; }
+
+.contact .human-validation {
+  margin: 10px;
+  background: #DCDCDC; }
 
 /**
 * End of contact section
