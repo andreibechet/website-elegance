@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 $post_date = file_get_contents("php://input");
 $data = json_decode($post_date);
 
-$to = "abechet@gmail.com";
+$to = "elegance.contact@gmail.com";
 $subject = "Elegance-ama.ro: ".$data->subject;
 
 $txt  = "Nume: ".$data->name." \r\n";
