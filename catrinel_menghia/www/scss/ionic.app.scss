@@ -99,11 +99,22 @@ a:hover {
             width: auto;
             height: 50px;
         }
+
+        /* Portrait and Landscape */
+        @media only screen
+        and (min-device-width: 320px)
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            img{
+                height: 40px;
+                margin-left: 30px;
+            }
+        }
     }
     .bottom-center-logo {
         // added to center the image
 
-        width: 72px; // the current relative width of the image in the page
+        width: 167px; // the current relative width of the image in the page
         margin: 0 auto;
         img {
             width: auto;
@@ -185,6 +196,18 @@ a:hover {
     border-top: 1px solid #ddd;
 }
 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .gallery-detail {
+        .thumbs-wrapper {
+            display: none;
+        }
+    }
+}
+
 .gallery-detail,
 .collaboratori-page,
 .contact-page,
@@ -193,11 +216,42 @@ a:hover {
     overflow: hidden;
 }
 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .targ-page,
+    .contact-page {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        
+        #footer {
+            display: none;
+        }
+    }
+}
+
 ul.detail_carousel {
     height: 600px;
     font-size: 0;
     img {
         max-width: 450px;
+    }
+
+    /* Portrait and Landscape */
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        img {
+            max-width: 270px;
+        }
+
+        .layer {
+            width: 270px;
+            margin: auto;
+        }
     }
 }
 
@@ -249,6 +303,16 @@ ul.detail_carousel {
             border-bottom: none;
         }
     }
+    
+    /* Portrait and Landscape */ 
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .magazine-list{
+            display: none;
+        }
+    }
 }
 
 /**
@@ -264,6 +328,16 @@ ul.detail_carousel {
         border-bottom: none;
         padding: 5px !important;
         text-align: center;
+    }
+
+    /* Portrait and Landscape */
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .colaboratori-map-wrapeer{
+            display: none;
+        }
     }
 }
 

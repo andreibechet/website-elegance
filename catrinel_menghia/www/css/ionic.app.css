@@ -9141,12 +9141,17 @@ a:hover {
   width: 100%; }
   .logo .top-left-logo {
     justify-content: flex-start;
-    margin-top: 5px; }
+    margin-top: 5px;
+    /* Portrait and Landscape */ }
     .logo .top-left-logo img {
       width: auto;
       height: 50px; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      .logo .top-left-logo img {
+        height: 40px;
+        margin-left: 30px; } }
   .logo .bottom-center-logo {
-    width: 72px;
+    width: 167px;
     margin: 0 auto; }
     .logo .bottom-center-logo img {
       width: auto;
@@ -9208,6 +9213,11 @@ a:hover {
   padding-bottom: 15px;
   border-top: 1px solid #ddd; }
 
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .gallery-detail .thumbs-wrapper {
+    display: none; } }
+
 .gallery-detail,
 .collaboratori-page,
 .contact-page,
@@ -9215,11 +9225,28 @@ a:hover {
 .targ-page {
   overflow: hidden; }
 
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .targ-page,
+  .contact-page {
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    .targ-page #footer,
+    .contact-page #footer {
+      display: none; } }
+
 ul.detail_carousel {
   height: 600px;
-  font-size: 0; }
+  font-size: 0;
+  /* Portrait and Landscape */ }
   ul.detail_carousel img {
     max-width: 450px; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    ul.detail_carousel img {
+      max-width: 270px; }
+    ul.detail_carousel .layer {
+      width: 270px;
+      margin: auto; } }
 
 .thumbs {
   width: 100%;
@@ -9242,41 +9269,53 @@ ul.detail_carousel {
 /**
 * End of Gallery detail
 */
-.galleries-container img,
-.colaboratori-container img,
-.magazine-container img {
-  margin: 0 auto; }
-
-.galleries-container .collection-card,
-.colaboratori-container .collection-card,
-.magazine-container .collection-card {
-  margin-top: 7px; }
-  .galleries-container .collection-card .gallery-title,
-  .colaboratori-container .collection-card .gallery-title,
-  .magazine-container .collection-card .gallery-title {
-    border-left: none;
-    border-right: none;
-    align-content: center;
-    text-align: center; }
-  .galleries-container .collection-card .image-item,
-  .colaboratori-container .collection-card .image-item,
-  .magazine-container .collection-card .image-item {
-    min-height: 425px;
-    border-left: none;
-    border-right: none;
-    border-bottom: none; }
+.galleries-container,
+.colaboratori-container,
+.magazine-container {
+  /* Portrait and Landscape */ }
+  .galleries-container img,
+  .colaboratori-container img,
+  .magazine-container img {
+    margin: 0 auto; }
+  .galleries-container .collection-card,
+  .colaboratori-container .collection-card,
+  .magazine-container .collection-card {
+    margin-top: 7px; }
+    .galleries-container .collection-card .gallery-title,
+    .colaboratori-container .collection-card .gallery-title,
+    .magazine-container .collection-card .gallery-title {
+      border-left: none;
+      border-right: none;
+      align-content: center;
+      text-align: center; }
+    .galleries-container .collection-card .image-item,
+    .colaboratori-container .collection-card .image-item,
+    .magazine-container .collection-card .image-item {
+      min-height: 425px;
+      border-left: none;
+      border-right: none;
+      border-bottom: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .galleries-container .magazine-list,
+    .colaboratori-container .magazine-list,
+    .magazine-container .magazine-list {
+      display: none; } }
 
 /**
 * Collaboratori
 */
-.colaboratori-container .item.map {
-  border: none; }
-
-.colaboratori-container .item {
-  border-top: none;
-  border-bottom: none;
-  padding: 5px !important;
-  text-align: center; }
+.colaboratori-container {
+  /* Portrait and Landscape */ }
+  .colaboratori-container .item.map {
+    border: none; }
+  .colaboratori-container .item {
+    border-top: none;
+    border-bottom: none;
+    padding: 5px !important;
+    text-align: center; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .colaboratori-container .colaboratori-map-wrapeer {
+      display: none; } }
 
 /**
 * Magazine
