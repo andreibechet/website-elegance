@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var paths = {
     sass: ['./www/scss/**/*.scss']
@@ -29,10 +30,11 @@ gulp.task('sass', function (done) {
 });
 
 gulp.task('scripts', function () {
-    gulp.src(
-        './www/**/*.js'
-    )
+    gulp.src([
+        './www/app/**/*.js'
+    ])
         .pipe(concat('all.min.js'))
+        .pipe(ngAnnotate())
         .pipe(uglify())
         .pipe(gulp.dest('./www/dist/'))
 });
