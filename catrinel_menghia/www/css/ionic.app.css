@@ -9240,7 +9240,8 @@ ul.detail_carousel {
   font-size: 0;
   /* Portrait and Landscape */ }
   ul.detail_carousel img {
-    max-width: 450px; }
+    max-width: 450px;
+    max-height: 600px; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     ul.detail_carousel img {
       max-width: 270px; }
