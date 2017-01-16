@@ -5,10 +5,10 @@
 
         <div class="wrapper">
             <div class="gallery-container">
-                <div class="col-md-6">
+                <div class="col-md-24 new-wrapper">
                     <ul rn-carousel class="image detail_carousel" rn-carousel-index="slideIndex2">
                         <li ng-repeat="slide in data[0].field_image">
-                            <div class="layer">
+                            <div class="layer new-layer">
                                 <img src="{{ slide.url }}">
 
                                 <div class="text_in_carousel">
@@ -18,20 +18,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 thumbs-wrapper">
-                    <div class="thumbs">
-                        <div class="thumb" ng-repeat="slide in data[0].field_image"
+
+                <div class="col-md-24 new-thumbs-wrapper">
+                    <div class="new-thumbs">
+                        <img ng-repeat="slide in data[0].field_image"
                              ng-click="$parent.slideIndex2=$index"
-                             ng-style="{'background-image': 'url(' + slide.url + ')'}"
-                             ng-class="{'is-active': ($parent.slideIndex2==$index)}"></div>
+                             src={{slide.url}}
+                             ng-class="{'is-active': ($parent.slideIndex2==$index)}">
                     </div>
                 </div>
-
             </div>
 
         </div>
 
-        <div id="footer" ng-include="'layout/footer.html'"/>
 
     </ion-content>
 </ion-view>
