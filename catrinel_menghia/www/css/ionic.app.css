@@ -9218,7 +9218,6 @@ a:hover {
   .gallery-detail .thumbs-wrapper {
     display: none; } }
 
-.collaboratori-page,
 .contact-page,
 .magazine-page,
 .targ-page {
@@ -9304,6 +9303,15 @@ ul.detail_carousel {
 /**
 * Collaboratori
 */
+.collaboratori-page #footer,
+.contact-page #footer {
+  display: none; }
+
+@media (min-width: 1367px) {
+  .collaboratori-page #footer,
+  .contact-page #footer {
+    display: block; } }
+
 .colaboratori-container {
   /* Portrait and Landscape */ }
   .colaboratori-container .item.map {

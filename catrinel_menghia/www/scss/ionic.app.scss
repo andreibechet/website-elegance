@@ -208,8 +208,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-
-.collaboratori-page,
 .contact-page,
 .magazine-page,
 .targ-page {
@@ -324,7 +322,18 @@ ul.detail_carousel {
 /**
 * Collaboratori
 */
+.collaboratori-page,
+.contact-page{
+    #footer{
+        display: none;
+    }
+    @media (min-width: 1367px) {
+        #footer{
+            display: block;
+        }
+    }
 
+}
 .colaboratori-container {
     .item.map {
         border: none;

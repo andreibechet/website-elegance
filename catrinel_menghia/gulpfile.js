@@ -30,9 +30,7 @@ gulp.task('sass', function (done) {
 });
 
 gulp.task('scripts', function () {
-    gulp.src([
-        './www/app/**/*.js'
-    ])
+    gulp.src(['./www/app/**/*.js'])
         .pipe(concat('all.min.js'))
         .pipe(ngAnnotate())
         .pipe(uglify())
@@ -42,6 +40,7 @@ gulp.task('scripts', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch('./www/app/**/*.js', ['lint']);
+    gulp.watch('./www/app/**/*.js', ['scripts']);
 });
 
 gulp.task('install', ['git-check'], function () {

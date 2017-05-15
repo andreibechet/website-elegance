@@ -8,7 +8,7 @@
         <ul rn-carousel class="image home_carousel" rn-carousel-auto-slide>
             <li ng-repeat="image in data[0].field_image">
                 <div class="layer">
-                    <img src="{{ image.url }}">
+                    <img src="small.jpg" srcset="{{ image.mobile_url }} 1000w,  {{ image.url }} 2000w" alt="yah">
 
                     <div class="text_in_carousel">
                         <p> {{ image.alt }} </p>
