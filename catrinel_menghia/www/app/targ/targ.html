@@ -1,30 +1,30 @@
 <ion-view view-title="Targuri de nunti">
-    <ion-content overflow-scroll="true" class="targ-page">
+  <ion-content overflow-scroll="true" class="targ-page">
+    <div ng-include="'layout/menu.html'" />
 
-        <div ng-include="'layout/menu.html'"/>
+    <div class="wrapper targuri-container">
+      <!-- <div class="targ-banner text-center">
+        <a target="_blank" href="http://www.mariagefest.ro">
+          <img src="img/banner-02032020-728x90.jpeg" />
+        </a>
+      </div> -->
 
-        <div class="wrapper targuri-container">
-          <!-- <div class="targ-banner text-center">
-            <a target="_blank" href="http://www.mariagefest.ro">
-              <img src="img/banner-lung.jfif">
-            </a>
-          </div> -->
-            <div class="col-sm-6 col-md-4" ng-repeat="targuri in data">
+      <div class="col-sm-6 col-md-4" ng-repeat="targuri in data">
+        <div class="thumbnail">
+          <div class="caption">
+            <h4>{{targuri.field_locatie_targ[0].value}}</h4>
 
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h4>{{targuri.field_locatie_targ[0].value}}</h4>
+            <p>
+              {{targuri.field_data_inceput_targ[0].value}} -
+              {{targuri.field_data_sfarsit_targ[0].value}}
+            </p>
 
-                        <p>{{targuri.field_data_inceput_targ[0].value}} -
-                            {{targuri.field_data_sfarsit_targ[0].value}}</p>
-
-                        <p>{{targuri.name[0].value}}</p>
-                    </div>
-                </div>
-            </div>
+            <p>{{targuri.name[0].value}}</p>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div  id="footer" ng-include="'layout/footer.html'"/>
-
-    </ion-content>
+    <div id="footer" ng-include="'layout/footer.html'" />
+  </ion-content>
 </ion-view>

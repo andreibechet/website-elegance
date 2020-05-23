@@ -1,28 +1,29 @@
 <ion-view view-title="Galleries">
-    <ion-content overflow-scroll="true">
+  <ion-content overflow-scroll="true">
+    <div ng-include="'layout/menu.html'" />
 
-        <div ng-include="'layout/menu.html'"/>
+    <div class="wrapper galleries-container">
+      <!-- <div class="targ-banner text-center">
+        <a target="_blank" href="http://www.mariagefest.ro">
+          <img src="img/banner-02032020-728x90.jpeg" />
+        </a>
+      </div> -->
 
-        <div class="wrapper galleries-container">
-          <!-- <div class="targ-banner text-center">
-            <a target="_blank" href="http://www.mariagefest.ro">
-              <img src="img/banner-lung.jfif">
-            </a>
-          </div> -->
-            <div class="collection-card col-sm-6 col-md-4" ng-repeat="gallery in data" href="#/app/galleries/{{gallery.nid[0].value}}">
-
-                <div class="item gallery-title">
-                    <h2>{{gallery.title[0].value}}</h2>
-                </div>
-
-                <div class="item image-item">
-                    <a href="#/galleries/{{gallery.nid[0].value}}">
-                        <img class="img-responsive" src="{{gallery.field_image[0].url}}">
-                    </a>
-                </div>
-
-            </div>
+      <div
+        class="collection-card col-sm-6 col-md-4"
+        ng-repeat="gallery in data"
+        href="#/app/galleries/{{gallery.nid[0].value}}"
+      >
+        <div class="item gallery-title">
+          <h2>{{gallery.title[0].value}}</h2>
         </div>
 
-    </ion-content>
+        <div class="item image-item">
+          <a href="#/galleries/{{gallery.nid[0].value}}">
+            <img class="img-responsive" src="{{gallery.field_image[0].url}}" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>
