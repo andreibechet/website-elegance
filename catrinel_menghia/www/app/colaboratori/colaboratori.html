@@ -1,34 +1,32 @@
 <ion-view view-title="Colaboratori">
-    <ion-content overflow-scroll="true" class="collaboratori-page">
+  <ion-content overflow-scroll="true" class="collaboratori-page">
+    <div ng-include="'layout/menu.html'" />
 
-        <div ng-include="'layout/menu.html'"/>
+    <div class="wrapper  colaboratori-container">
+      <!-- <div class="targ-banner text-center">
+        <a target="_blank" href="http://www.mariagefest.ro">
+          <img src="img/banner-02032020-728x90.jpeg" />
+        </a>
+      </div> -->
 
-        <div class="wrapper  colaboratori-container">
-          <!-- <div class="targ-banner text-center">
-            <a target="_blank" href="http://www.mariagefest.ro">
-              <img src="img/banner-lung.jfif">
-            </a>
-          </div> -->
-            <div class="col-md-4">
-                <div class="collection-card" ng-repeat="colaboratori in data">
-                    <div class="item">
-                        <p>{{colaboratori.name[0].value}}</p>
-                        <p>{{colaboratori.field_adresa_colaboratori[0].value}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-8 colaboratori-map-wrapeer">
-                <div class="collection-card">
-                    <div class="item map">
-                        <div id="map" style="min-width: 200px; height: 450px;"></div>
-                    </div>
-                </div>
-            </div>
-
+      <div class="col-md-4">
+        <div class="collection-card" ng-repeat="colaboratori in data">
+          <div class="item">
+            <p>{{colaboratori.name[0].value}}</p>
+            <p>{{colaboratori.field_adresa_colaboratori[0].value}}</p>
+          </div>
         </div>
+      </div>
 
-        <div  id="footer" ng-include="'layout/footer.html'"/>
+      <div class="col-md-8 colaboratori-map-wrapeer">
+        <div class="collection-card">
+          <div class="item map">
+            <div id="map" style="min-width: 200px; height: 450px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    </ion-content>
+    <div id="footer" ng-include="'layout/footer.html'" />
+  </ion-content>
 </ion-view>

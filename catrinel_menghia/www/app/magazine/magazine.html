@@ -1,38 +1,40 @@
 <ion-view view-title="Magazine">
-    <ion-content overflow-scroll="true" class="magazine-page">
+  <ion-content overflow-scroll="true" class="magazine-page">
+    <div ng-include="'layout/menu.html'" />
 
-        <div ng-include="'layout/menu.html'"/>
+    <div class="wrapper magazine-container">
+      <!-- <div class="targ-banner text-center">
+        <a target="_blank" href="http://www.mariagefest.ro">
+          <img src="img/banner-02032020-728x90.jpeg" />
+        </a>
+      </div> -->
 
-        <div class="wrapper magazine-container">
-
-          <!-- <div class="targ-banner text-center">
-            <a target="_blank" href="http://www.mariagefest.ro">
-              <img src="img/banner-lung.jfif">
-            </a>
-          </div> -->
-
-            <div class="col-md-12">
-                <div class="collection-card">
-                    <div class="item map_magazine">
-                        <div id="map_magazine" style="min-width: 200px; height: 350px;"></div>
-                    </div>
-                </div>
+      <div class="col-md-12">
+        <div class="collection-card">
+          <div class="item map_magazine">
+            <!-- <div id="map_magazine" style="min-width: 200px; height: 350px;"></div> -->
+            <div style="min-width: 200px; height: 350px;">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1etR9H0yP38b70I1FarQ8-rBOQ7I1fBcH"
+                width="640"
+                height="480"
+              ></iframe>
             </div>
-
-
-            <div class="col-md-6 magazine-list" ng-repeat="magazine in data">
-                <div class="collection-card">
-                    <div class="item">
-                        <p>{{magazine.name[0].value}}</p>
-
-                        <p>{{magazine.field_adresa_magazin[0].value}}</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
 
-        <div id="footer" ng-include="'layout/footer.html'"/>
+      <div class="col-md-6 magazine-list" ng-repeat="magazine in data">
+        <div class="collection-card">
+          <div class="item">
+            <p>{{magazine.name[0].value}}</p>
 
-    </ion-content>
+            <p>{{magazine.field_adresa_magazin[0].value}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" ng-include="'layout/footer.html'" />
+  </ion-content>
 </ion-view>
